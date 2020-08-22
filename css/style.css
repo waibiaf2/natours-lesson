@@ -9,17 +9,23 @@ Dark green: #28b485
 /* Colors */
 /* Base Styles 
 ********************************************************/
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* (10px/16px)*100  */ }
 
 body {
   font-weight: 400;
   font-family: "lato", sans-serif;
-  font-size: 16px;
   columns: #777777;
-  padding: 20px; }
+  padding: 2rem;
+  box-sizing: border-box; }
 
 /* Header 
 *************************************************************/
@@ -30,36 +36,34 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   position: relative; }
-
-.logo {
-  height: 35px; }
-  .logo-box {
+  .header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px; }
-
-.text-box {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px; }
+  margin-bottom: 6rem; }
   .heading-primary span {
     display: block;
-    font-weight: 400; }
-  .heading-primary-main {
-    font-size: 60px;
-    letter-spacing: 35px;
+    font-weight: 401; }
+  .heading-primary--main {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
     animation: MoveInLeft 1s ease-out; }
-  .heading-primary-sub {
-    font-size: 20px;
-    letter-spacing: 17.5px;
+  .heading-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
     animation: MoveInRight 1s ease-out; }
 
 /* Animations 
@@ -67,7 +71,7 @@ body {
 @keyframes MoveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(-10rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -75,17 +79,17 @@ body {
 @keyframes MoveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px); }
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-10px); }
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
-    transform: translateX(-10px); } }
+    transform: translateX(-1rem); } }
 
 @keyframes MoveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(100px); }
+    transform: translateY(10rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -95,27 +99,28 @@ body {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  font-size: 1.6rem; }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20 rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
-  color: #777777; }
-  .btn-white::after {
+  color: #777; }
+  .btn--white::after {
     background-color: #fff; }
 
 .btn::after {
@@ -123,13 +128,13 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
 
-.btn-animated {
+.btn--animated {
   animation: MoveInBottom 2s ease-out 0.75s;
   animation-fill-mode: backwards; }
