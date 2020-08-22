@@ -1,71 +1,4 @@
-/*
-COLORS:
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
-/* Variables
-**************************************************** */
 /* Colors */
-/* Base Styles 
-********************************************************/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%;
-  /* (10px/16px)*100  */ }
-
-body {
-  font-weight: 400;
-  font-family: "lato", sans-serif;
-  columns: #777777;
-  padding: 2rem;
-  box-sizing: border-box; }
-
-/* Header 
-*************************************************************/
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary span {
-    display: block;
-    font-weight: 401; }
-  .heading-primary--main {
-    font-size: 6rem;
-    letter-spacing: 3.5rem;
-    animation: MoveInLeft 1s ease-out; }
-  .heading-primary--sub {
-    font-size: 2rem;
-    letter-spacing: 1.75rem;
-    animation: MoveInRight 1s ease-out; }
-
 /* Animations 
 **************************************************************/
 @keyframes MoveInLeft {
@@ -93,6 +26,44 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* Defines what 1rem is equal to */
+  font-size: 62.5%;
+  /* (10px/16px)*100  */ }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-weight: 400;
+  font-family: "lato", sans-serif;
+  columns: #777777;
+  padding: 2rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary span {
+    display: block;
+    font-weight: 401; }
+  .heading-primary--main {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    animation: MoveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+    animation: MoveInRight 1s ease-out; }
 
 /* Button Styles 
 *************************************************************/
@@ -138,3 +109,25 @@ body {
 .btn--animated {
   animation: MoveInBottom 2s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+/* Header 
+*************************************************************/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
