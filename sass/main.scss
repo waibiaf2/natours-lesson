@@ -1,0 +1,182 @@
+/*
+COLORS:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
+
+/* Variables
+**************************************************** */
+
+/* Colors */
+$color-parimary: #55c57a;
+$color-parimary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+/* Base Styles 
+********************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-family: "lato", sans-serif;
+  font-size: 16px;
+  columns: #777777;
+  padding: 20px;
+}
+
+/* Header 
+*************************************************************/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-parimary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+
+.logo {
+  height: 35px;
+  &-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+}
+
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+  span {
+    display: block;
+    font-weight: 400;
+  }
+  &-main {
+    font-size: 60px;
+    letter-spacing: 35px;
+    animation: MoveInLeft 1s ease-out;
+  }
+
+  &-sub {
+    font-size: 20px;
+    letter-spacing: 17.5px;
+    animation: MoveInRight 1s ease-out;
+  }
+}
+
+/* Animations 
+**************************************************************/
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes MoveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button Styles 
+*************************************************************/
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20 rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10 rgba(0, 0, 0, 0.2);
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #777777;
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-animated {
+    animation: MoveInBottom 2s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
