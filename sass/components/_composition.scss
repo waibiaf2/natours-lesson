@@ -1,6 +1,6 @@
 .composition {
     position: relative;
-    transform: all 0.2s;
+
     &__photo {
         width: 55%;
         box-shadow: 0 1.6rem 4rem rgba($color: $color-black, $alpha: 0.4);
@@ -8,6 +8,7 @@
         position: absolute;
         background-color: transparent;
         outline-offset: 1rem;
+        transition: all 0.2s;
 
         &--1 {
             top: -2rem;

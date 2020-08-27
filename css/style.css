@@ -170,15 +170,15 @@ body {
   transform: translateY(0); }
 
 .composition {
-  position: relative;
-  transform: all 0.2s; }
+  position: relative; }
   .composition__photo {
     width: 55%;
     box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 3px;
     position: absolute;
     background-color: transparent;
-    outline-offset: 1rem; }
+    outline-offset: 1rem;
+    transition: all 0.2s; }
     .composition__photo--1 {
       top: -2rem;
       left: 0; }
