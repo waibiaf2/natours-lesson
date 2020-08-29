@@ -2,6 +2,7 @@
     height: 50rem;
     position: relative;
     perspective: 150rem;
+
     &__side {
         height: 50rem;
         color: white;
@@ -12,14 +13,22 @@
         position: absolute;
         top: 0;
         left: 0;
+        box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.2);
+        border-radius: 3px;
 
         &--front {
-            background-color: orange;
+            color: green;
         }
 
         &--back {
             transform: rotateY(180deg);
-            background-color: blue;
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-light,
+                    $color-primary-dark
+                );
+            }
         }
     }
 
