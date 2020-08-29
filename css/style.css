@@ -197,7 +197,7 @@ body {
     transform: scale(0.9); }
 
 .feature-box {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 4rem 2rem;
   font-size: 1.7rem;
   text-align: center;
@@ -263,7 +263,7 @@ body {
     text-align: center; }
 
 .section-about {
-  padding: 25rem 0 40rem;
+  padding: 25rem 0 30rem;
   margin-top: -20vh;
   background-color: #f7f7f7; }
 
