@@ -1,5 +1,21 @@
 .section-about {
-    padding: 25rem 0;
+    padding: 25rem 0 40rem;
     margin-top: -20vh;
     background-color: $color-grey-light-1;
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+            to right,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url(../img/nat-4.jpg);
+    transform: skewY(-4.6deg);
+    margin-top: -18.5rem;
+
+    & > * {
+        transform: skewY(4.6deg);
+    }
 }
