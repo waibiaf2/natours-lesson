@@ -3,9 +3,11 @@
     padding: 6rem;
     font-size: $default-font-size;
     margin: 0 auto;
-    box-shadow: 0 2.54rem 4rem rgba($color: $color-black, $alpha: 0.3);
+    box-shadow: 0 2rem 3rem rgba($color: $color-black, $alpha: 0.3);
     transform: skewX(-15deg);
     padding-right: 2.5rem;
+    z-index: 1000;
+    background-color: rgba($color-white, 0.7);
 
     &__shape {
         width: 15rem;
